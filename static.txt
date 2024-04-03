@@ -1,0 +1,17 @@
+void main() {
+
+
+  print(Constants.greetings);
+  print(Constants.bye);
+  print(Constants.givemesomevalue());
+}
+
+class Constants{
+  static int height=15;
+   static String greetings="How are you?";
+  static String bye="Bye";
+  static int givemesomevalue()
+  {
+    return height;
+  }
+}
