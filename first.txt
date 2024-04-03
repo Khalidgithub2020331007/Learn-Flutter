@@ -1,0 +1,41 @@
+void main() {
+final cookie=Cookie(shape:'Hello',size:30);
+  print(cookie.height);
+  print(cookie._height);
+  cookie.setheight=5;
+  print(cookie.height);
+  print(cookie._height);
+  print(cookie.calculate());
+}
+
+class Cookie{
+  final String shape;
+  final int size;
+  
+  Cookie({required this.shape,required this.size})
+  {
+    baking();
+  }
+  int _height=4;
+  int _width=5;
+    
+  int get height=>20;
+  set setheight(int h)
+  {
+    _height=h;
+  }
+  
+  void baking()
+  {
+    print("Baking...");
+  }
+  
+  bool isCooking()
+  {
+    return false;
+  }
+  int calculate()
+  {
+    return _height*_width;
+  }
+}
