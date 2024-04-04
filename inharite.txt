@@ -1,0 +1,43 @@
+void main() {
+  Car car=Car();
+  print(car.noOfWheels);
+  print((car as Vehicle).isEngineOn);
+  car.accelerate();
+  print(car.speed);
+  Truck truck=Truck();
+  print(truck.noOfWheels);
+  truck.accelerate();
+  print(truck.speed);
+  print(truck.isEngineOn);
+  
+}
+class Something{
+  int speed=0;
+  void accelerate()
+  {
+    speed+=30;
+  }
+}
+class Vehicle extends Something{
+  int speed=10;
+  bool isEngineOn=true;
+  void accelerate()
+  {
+    speed+=5;
+  }
+}
+class Car extends Vehicle{
+  int noOfWheels=4;
+  void printSomething()
+  {
+    print(noOfWheels);
+  }
+}
+
+class Truck extends Something{
+  int noOfWheels=6;
+  int speed=30;
+  bool isEngineOn=false;
+  
+  
+}
