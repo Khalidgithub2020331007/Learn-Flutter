@@ -1,16 +1,35 @@
 void main()
 {
-  
+  Car car=Car();
+  car.accelaration();
 }
 
 abstract class Vehicle{
-  
+  void accelaration();
+  int noOfWheels=4;
 }
 
-class Car implements Vehicle{
-  
-}
+// class Car implements Vehicle{
+//   int noOfWheels=4;
+//   void accelaration()
+//   {
+//     print(noOfWheels);
+//     print("Car accelaretion");
+//   }
+// }
 
 class Truck implements Vehicle{
-  
+  int noOfWheels=10;
+    void accelaration()
+  {
+    print("Truck accelaretion");
+  }
+}
+class Car extends Vehicle{
+
+  void accelaration()
+  {
+    print(noOfWheels);
+    print("Car accelaretion");
+  }
 }
