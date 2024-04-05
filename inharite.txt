@@ -1,7 +1,7 @@
 void main() {
   Car car=Car();
   print(car.noOfWheels);
-  print((car as Vehicle).isEngineOn);
+  print(car.isEngineOn);
   car.accelerate();
   print(car.speed);
   Truck truck=Truck();
@@ -9,35 +9,91 @@ void main() {
   truck.accelerate();
   print(truck.speed);
   print(truck.isEngineOn);
+  Vehicle vehicle=Vehicle();
+  print(vehicle.isEngineOn);
   
 }
-class Something{
-  int speed=0;
-  void accelerate()
-  {
-    speed+=30;
-  }
-}
-class Vehicle extends Something{
-  int speed=10;
-  bool isEngineOn=true;
-  void accelerate()
-  {
-    speed+=5;
-  }
-}
-class Car extends Vehicle{
-  int noOfWheels=4;
-  void printSomething()
-  {
-    print(noOfWheels);
-  }
-}
+// class Something{
+//   int speed=0;
+//   void accelerate()
+//   {
+//     speed+=30;
+//   }
+// }
+// class Vehicle{
+//   int speed=10;
+//   bool isEngineOn=true;
+//   int noOfWheels=4;
+//   void accelerate()
+//   {
+//     print(" Accelerating..");
+//   }
+// }
+// // class Car extends Vehicle{
+// //   int noOfWheels=4;
+// //   void printSomething()
+// //   {
+// //     print(noOfWheels);
+// //   }
+// // }
 
-class Truck extends Something{
-  int noOfWheels=6;
-  int speed=30;
-  bool isEngineOn=false;
+// // class Truck extends Something{
+// //   int noOfWheels=6;
+// //   int speed=30;
+// //   bool isEngineOn=false;
   
+  
+// // }
+// class Car implements Vehicle{
+//   @override
+//   int speed=10;
+//   bool isEngineOn=true;
+//   int noOfWheels=4;
+//     void accelerate()
+//   {
+//     print("Car Accelerating..");
+//   }
+// }
+// class Truck implements Vehicle{
+//   @override
+//   int speed=10;
+//   bool isEngineOn=true;
+//   int noOfWheels=4;
+//     void accelerate()
+//   {
+//     print("Truck Accelerating..");
+//   }
+// }
+// class Car extends Vehicle{
+//    int speed=10;
+//   bool isEngineOn=true;
+//   int noOfWheels=4;
+//     void accelerate()
+//   {
+//       super.accelerate();
+//       super.isEngineOn= false;
+//     print("Car Accelerating..");
+//   }
+  
+// }
+class Otherclass{
+   int speed=10;
+  bool isEngineOn=true;
+  int noOfWheels=4;
+}
+class Vehicle{
+ 
+  void accelerate()
+  {
+    print("Accelerating..");
+  }
+}
+class Car extends Otherclass implements Vehicle{
+
+    void accelerate()
+  {
+      
+    print("Car Accelerating..");
+  }
   
 }
