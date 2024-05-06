@@ -6,18 +6,21 @@ void main() {
     Student('Sohan',40),
   ];
   
+print(students);
+//   List<Student> filterstudent=[];
+  
+//   for(int i=0;i<students.length;i++)
+//   {
+//     if(filterstudent[i].marks>=20)
+//     {
+//        filterstudent.add(students[i]);
+//     }
+//   }
+//   final filterstudent= students.where((student)=>student.marks>=20);
+//   print(filterstudent);
+  students=students.where((student)=>student.marks>=20).toList();
   print(students);
-  List<Student> filterstudent=[];
-  
-  for(int i=0;i<students.length;i++)
-  {
-    if(filterstudent[i].marks>=20)
-    {
-       filterstudent.add(students[i]);
-    }
-  }
-  
-  print(filterstudent);
+  print(students.reversed.toList());
   
 }
 class Student{
