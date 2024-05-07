@@ -18,6 +18,8 @@ void main() {
     },
   ];
   marks.map((e){
-    print(e);
+    e.forEach((key,val){
+      print('$key:$val');
+    });
   }).toList;
 }
